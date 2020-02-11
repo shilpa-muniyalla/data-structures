@@ -1,2 +1,2 @@
 # my-learning
-my sample codes
+my practice programms on data structures
