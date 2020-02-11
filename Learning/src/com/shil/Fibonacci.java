@@ -1,45 +1,23 @@
+//in fibonacci seriesnext number is the sum of two previous numbers.
+//fibonnaci series previous numbers are 0 and 1
+
 package com.shil;
 
-import java.util.Scanner;
-
-/*public class Fibonacci {
+public class Fibonacci {
 	
+	public static void findFibonacci(int count,int num1,int num2) {
+		for(int i=0;i<count;i++) {
+		System.out.println(num1);
+		int sum=num1+num2;
+		num1=num2;
+		num2=sum;
+	}
+	}
+
 	public static void main(String[] args) {
-		int count=7,num1=0,num2=1;
 		
-		for(int i=1;i<=count;i++) {
-			System.out.print(num1);
-			int sumOfPrevTwo=num1+num2;
-			num1=num2;
-			num2=sumOfPrevTwo;
-			
-		}
+		findFibonacci(5,0,1);
+
 	}
 
-	
-		
-
-	}*/
-import java.util.*;
-public class Fibonacci{
-	
-	public static void main (String[] args) {
-		
-		int count,num1=0,num2=1;
-		System.out.println("How many numbers you want in the sequence");
-		Scanner scan = new Scanner(System.in);
-		count=scan.nextInt();
-		scan.close();
-		
-		int i=1;
-		while(i<=count) {
-			System.out.print(num1);
-			int sum=num1+num2;
-			num1=num2;
-			num2=sum;
-			i++;
-		}
-	}
 }
-
-

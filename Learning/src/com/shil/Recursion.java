@@ -1,18 +1,18 @@
+//Recursion in java is process in which method calls itself continously
+
 package com.shil;
 
 public class Recursion {
-
 	
-	public static void reduceByOne(int n) {
-		
-		if(n>=0) {
-		reduceByOne(n-1);
+	public static void reducebyOne(int number) {
+		if(number>=0) {
+			reducebyOne(number-1);
+		}
+		System.out.println(number);
 	}
-		System.out.println("method calling: " +n);
-	}
+
 	public static void main(String[] args) {
-		Recursion.reduceByOne(10);
-		
+		reducebyOne(10);
 		
 
 	}

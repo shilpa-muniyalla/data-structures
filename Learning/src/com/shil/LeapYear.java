@@ -1,20 +1,25 @@
 package com.shil;
 
 public class LeapYear {
-	public void checkLeapYear(int year) {
-		int leapYearConstant= 4;
-		if(year%leapYearConstant==0) {
-			System.out.println("This is a Leap Year" +year);
-					}
+	
+	public static boolean findLeapYear(int year) {
+		int leapYear=4;
+		if(year%leapYear==0) {
+			System.out.println("this is a leap year");
+			return true;
+		}
 		else {
-			System.out.println("This is not a Leap Year" +year);
+			System.out.println("this is not a leap year");
+			return false;
+			
 		}
 	}
-	
+
 	public static void main(String[] args) {
-		int b = 2019;
-		LeapYear l = new LeapYear();
-		l.checkLeapYear(b);
+		findLeapYear(2020);
+		
+		
+
 	}
 
 }

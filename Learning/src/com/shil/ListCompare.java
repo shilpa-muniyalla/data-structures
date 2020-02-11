@@ -1,52 +1,62 @@
 package com.shil;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 public class ListCompare {
-	
+
 	public static void main(String[] args) {
 		
-		List<String> list = new ArrayList<>();
+		List<String> list = new ArrayList();
 		list.add("ramya");
 		list.add("shilpa");
-		list.add("praveen");
+		list.add("muniyalla");
+		list.add("rathnamma");
+		
 		Collections.sort(list);
 		
+		//first method to iterate
 		for(String s:list) {
 			System.out.println(s);
 		}
 		
-		Student stu1=new Student();
+		//second method to iterate
+		for(int i=0;i<list.size();i++) {
+			System.out.println(list.get(i));
+		}
+		
+		//comparing student object by name and class
+		Student stu1 = new Student();
 		stu1.setName("ramya");
 		stu1.setAge(28);
 		
-		Student stu2=new Student();
-		stu2.setName("shilpa");
+		Student stu2 = new Student();
+		stu2.setName("praveen");
 		stu2.setAge(31);
 		
-		Student stu3=new Student();
-		stu3.setName("praveen");
-		stu3.setAge(30);
+		Student stu3 = new Student();
+		stu3.setName("muniyalla");
+		stu3.setAge(55);
 		
-		List<Student> studentList =new ArrayList<>();
-		studentList.add(stu1);
-		studentList.add(stu2);
-		studentList.add(stu3);
+		List<Student> l = new ArrayList();
+		l.add(stu1);
+		l.add(stu2);
+		l.add(stu3);
 		
-		Collections.sort(studentList, new StudentCompByName());
-		Iterator<Student> studentIterator=studentList.iterator();
-		while(studentIterator.hasNext()) {
-			Student student=studentIterator.next();
-			System.out.println(student.getAge() +student.getName());
-		}
-		
-		Collections.sort(studentList, new StudentCompByAge());
-		for(int i=0; i<studentList.size(); i++) {
-			System.out.println(studentList.get(i).getAge() +studentList.get(i).getName());
-			
-		}
-		
-		
+		Collections.sort(l, new StudentCompbyName());
+		Iterator<Student> i=l.iterator();
+		while(i.hasNext()) {
+		Student st=i.next();
+		System.out.println(st.getName()  +st.getAge());
 		
 	}
-
+		
+		Collections.sort(l, new StudentCompbyAge());
+		for(int k=0;k<l.size();k++) {
+			System.out.println(l.get(k).getAge()  +""  +l.get(k).getName());
+		}
+}
 }

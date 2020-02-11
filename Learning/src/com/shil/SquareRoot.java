@@ -1,21 +1,25 @@
+//finding square root of number
+//ex-15 the nearest square root is 3 that is 3*3=9 because 4*4 will exceed the number 15 
+//because 4*4 is 16
+
 package com.shil;
 
 public class SquareRoot {
 	
-	public void checkSquareRoot(int number) {
+	public static int findSquareRoot(int number) {
 		int result=2;
-		int i=2;
-		while(result<=number) {
+		int i;
+		for(i=2;result<=number;i++) {
 			result=i*i;
-			i++;
+			
 		}
-		System.out.println("the square root of :"+number +" is " +(i-2));
+		return (i-2);
+		
 	}
-	
 
 	public static void main(String[] args) {
-		SquareRoot squareRoot = new SquareRoot();
-		squareRoot.checkSquareRoot(99);
+		System.out.println(findSquareRoot(25));
+	
 
 	}
 

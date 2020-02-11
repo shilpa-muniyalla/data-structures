@@ -1,19 +1,19 @@
 package com.shil;
 
 public class EvenOdd {
-	int value = 2;
-	public void checkEvenOdd(int evenOddNumber) {
-		if(evenOddNumber%value==0) {
-			System.out.println("This is even number" +" "+evenOddNumber);
+	
+	public static void findEvenOdd(int x) {
+		int a=2;
+		if(x%a==0) {
+			System.out.println("the number is even");
 		}
 		else {
-			System.out.println("This is odd number" +" "+evenOddNumber);
+			System.out.println("the number is odd");
 		}
 	}
 	
 	public static void main(String[] args) {
-		EvenOdd evenOdd = new EvenOdd();
-		evenOdd.checkEvenOdd(-1);
+		findEvenOdd(-1);
 	}
 
 }

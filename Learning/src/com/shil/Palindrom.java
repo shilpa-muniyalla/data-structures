@@ -1,34 +1,36 @@
+//palindrom word is word which is same after reverse
+
 package com.shil;
 
 public class Palindrom {
-	public void checkPalindrom(String name) {
-
-		if (name == null) {
+	
+	public static void findPalindrom(String word) {
+		
+		if(word==null) {
 			System.out.println("input is null");
-		} else {
-
-			StringBuilder stringBuilder = new StringBuilder();
-
-			for (int i = name.length() - 1; i >= 0; i--) {
-				stringBuilder.append(name.charAt(i));
-
-			}
-
-			String reverse = stringBuilder.toString();
-			
-
-			if (name.equals(reverse)) {
-				System.out.println("this is palindrom : "  +name);
-			} else {
-				System.out.println("This is not a palindrom: "  +name);
-			}
 		}
-
+		else {
+		
+		StringBuilder stringBuilder =new StringBuilder();
+		for(int i=word.length()-1;i>=0;i--) {
+			stringBuilder.append(word.charAt(i));
+		}
+		
+		
+		String reverse=stringBuilder.toString();
+		if(word.equals(reverse)) {
+			System.out.println("this is a palindrom");
+		}
+		else {
+			System.out.println("its not palindrom");
+		}
+	}
 	}
 
 	public static void main(String[] args) {
-		Palindrom palindrom = new Palindrom();
-		palindrom.checkPalindrom("asa");
+		findPalindrom("shilpa");
+		
+
 	}
 
 }

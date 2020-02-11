@@ -1,7 +1,5 @@
 package com.shil;
 
-import java.util.Comparator;
-
 public class Student {
 	
 	private String name;
@@ -21,7 +19,7 @@ public class Student {
 	
 	public void setAge(int age) {
 		this.age=age;
+		
 	}
-	
-	
+
 }
