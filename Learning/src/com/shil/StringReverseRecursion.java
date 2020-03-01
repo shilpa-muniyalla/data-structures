@@ -3,6 +3,9 @@
 
 package com.shil;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class StringReverseRecursion {
 
 	public static String findStringReverseRecursion(String str) {
@@ -18,7 +21,11 @@ public class StringReverseRecursion {
 	public static void main(String[] args) {
 		System.out.print(findStringReverseRecursion("MyJAVA"));
 	
-
+//		List<Student> l= list.stream().filter(a->number==a.getAge()).collect(Collectors.toList());
+			//return l;
+			
+			////List<Student> l=list.stream().filter(a->name.equals(a.getName())).collect(Collectors.toList());
+			//return l;
 	}
 
 }

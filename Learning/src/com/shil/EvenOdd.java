@@ -2,18 +2,18 @@ package com.shil;
 
 public class EvenOdd {
 	
-	public static void findEvenOdd(int x) {
+	public static String findEvenOdd(int x) {
 		int a=2;
 		if(x%a==0) {
-			System.out.println("the number is even");
+			return "EVEN";
 		}
 		else {
-			System.out.println("the number is odd");
+			return "ODD";
 		}
 	}
 	
 	public static void main(String[] args) {
-		findEvenOdd(-1);
+		System.out.println(findEvenOdd(-1));
 	}
 
 }

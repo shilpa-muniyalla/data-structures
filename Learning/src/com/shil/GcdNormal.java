@@ -24,7 +24,7 @@ public class GcdNormal {
 	
 
 	public static void main(String[] args) {
-		System.out.println(findGcdNormal(50,75));
+		System.out.println(findGcdNormal(12,13));
 		
 
 	}
